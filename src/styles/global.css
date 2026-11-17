@@ -1,0 +1,110 @@
+/* MediFlow global styles - shared across all roles. */
+:root {
+  --mf-primary: #2563eb;
+  --mf-secondary: #0d9488;
+  --mf-bg: #f8fafc;
+  --mf-sidebar: #0f172a;
+  --mf-card: #ffffff;
+  --mf-success: #16a34a;
+  --mf-warning: #f59e0b;
+  --mf-error: #dc2626;
+  --mf-text: #0f172a;
+  --mf-muted: #64748b;
+  --mf-border: #e2e8f0;
+  --mf-radius: 12px;
+  --mf-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--mf-bg);
+  color: var(--mf-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.mf-btn-primary {
+  background: var(--mf-primary);
+  border: 1px solid var(--mf-primary);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.mf-btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.mf-btn-outline {
+  background: transparent;
+  border: 1px solid var(--mf-border);
+  color: var(--mf-text);
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.mf-btn-outline:hover {
+  border-color: var(--mf-primary);
+  color: var(--mf-primary);
+}
+
+.mf-card {
+  background: var(--mf-card);
+  border: 1px solid var(--mf-border);
+  border-radius: var(--mf-radius);
+  box-shadow: var(--mf-shadow);
+}
+
+.mf-demo-banner {
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  color: #075985;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.mf-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #dbeafe;
+  border-top-color: var(--mf-primary);
+  border-radius: 50%;
+  animation: mf-spin 0.8s linear infinite;
+}
+
+@keyframes mf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
